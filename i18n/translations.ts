@@ -3,6 +3,12 @@ export async function getTranslations(locale: string): Promise<Translations> {
 }
 
 export interface Translations {
+  Awards: {
+    title: string;
+    about: string;
+    description?: string;
+    criterion?: string[];
+  }[];
   Main: {
     director: {
       alt: string;
