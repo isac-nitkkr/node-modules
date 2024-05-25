@@ -204,7 +204,35 @@ export interface Translations {
     Account: {};
     CentralLibrary: {};
     CentralWorkshop: {};
-    CentreOfComputingAndNetworking: {};
+    CentreOfComputingAndNetworking: {
+      title: string;
+      label: {
+        about: string;
+        facilities: string;
+      };
+      responsibilitiesTitle: string;
+      responsibilities: string[];
+      clickHere: string;
+      clickHereInfo: string;
+      staffTable: {
+        name: string;
+        designation: string;
+        profIncharge: string;
+      };
+      workTimeTitle: string;
+      workTime: string;
+      networkingTitle: string;
+      networking: string[];
+      resourcesTitle: string;
+      resourcesTableTitle: {
+        sno: string;
+        item: string;
+        quantity: string;
+      };
+      resources: string[];
+      softwareTitle: string;
+      software: string[];
+    };
     ElectricalMaintenance: {};
     Estate: {};
     GeneralAdministration: {};
