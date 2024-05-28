@@ -1,13 +1,15 @@
-import WorkInProgress from '~/components/work-in-progress';
-
-// FIXME: This will contain both ids from forms and persistent URLs.
-// Old persistent URLs should trigger a redirect.
 // export async function generateStaticParams() {}
 
-export default function Form({
-  params: { locale },
+import { redirect } from 'next/navigation';
+
+import { getFormForSubmission } from '~/actions/form.actions';
+
+export default async function Form({
+  params: { locale, id },
 }: {
   params: { locale: string; id: string };
 }) {
-  return <WorkInProgress locale={locale} />;
+  if (!id) return redirect('/');
+  const { Element, props } = await getFormForSubmission(id);
+  return <Element {...props} locale={locale} id={id} />;
 }
