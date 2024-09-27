@@ -56,48 +56,33 @@ export default async function FacultyOrStaffLayout({
       href: 'awards',
     },
   ];
-  const faculty = 0
-    ? await db.query.faculty.findFirst({
-        where: (faculty, { eq }) => eq(faculty.id, Number(employeeId)),
+  const faculty = await db.query.faculty.findFirst({
+    where: (faculty, { eq }) => eq(faculty.employeeId, employeeId),
+    columns: {
+      id: true,
+      officeAddress: true,
+      designation: true,
+      googleScholarId: true,
+      orcidId: true,
+      researchGateId: true,
+      scopusId: true,
+      publications: true,
+      patents: true,
+      books: true,
+    },
+    with: {
+      person: {
         columns: {
-          id: true,
-          designation: true,
-          googleScholarId: true,
-          orcidId: true,
-          researchGateId: true,
-          scopusId: true,
+          name: true,
+          email: true,
+          telephone: true,
+          countryCode: true,
+          alternateTelephone: true,
+          alternateCountryCode: true,
         },
-        with: {
-          person: {
-            columns: {
-              name: true,
-              email: true,
-              telephone: true,
-              countryCode: true,
-              alternateTelephone: true,
-              alternateCountryCode: true,
-            },
-          },
-        },
-      })
-    : {
-        id: employeeId,
-        designation: 'Professor',
-        googleScholarId: '',
-        orcidId: '',
-        researchGateId: '',
-        scopusId: '',
-        person: {
-          name: 'Arun Goel',
-          email: 'jitejitenderchhabra@nitkkr.ac.in',
-          telephone: '01744-233482',
-          countryCode: '91',
-          alternateTelephone: '9416733789',
-          alternateCountryCode: '91',
-          image:
-            'https://s3-alpha-sig.figma.com/img/d8be/da0e/c0b786889eedb113cb80b5b614b1b2a3?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k9DXXsfjSQVEi8SMGzfx~brJDpIsgkJPeaLr9GJ0AAjk7JlOrE9CwWen9xKVslOnc6YvYN9K0Js7QLtRCjtXnK3Mq27x8oObBO6I5nDFlCL7algKCYMiWaI2AN1FftbYb9zMprbFXqgvEPeGIZ1DZVYmUtOkjLdT1IGhqpNEPkGKP1GrjK1CAIYUk4kw3TPcTQtS2xBRzd~A3bC7lT4k9UfZPvZL8U~zSVVtINqhH6Nv6K1x~X1Yj~7N3fTMrY6OUJL~oitq~xR2pAowJpfasHi7BtxhlgG0pSvwMhoETi1b4DoZU0BP8xKdPVVPvkrm09f3XMc5adGc8tfYO316Zw__',
-        },
-      };
+      },
+    },
+  });
 
   if (!faculty) {
     return <div>Faculty not found</div>;
@@ -116,7 +101,7 @@ export default async function FacultyOrStaffLayout({
             width={200}
             height={200}
             className="absolute right-0 top-0 z-10 mr-3 size-32 translate-y-[-50%] rounded-full border-[1rem] border-background object-cover sm:mr-6 sm:size-40 lg:mr-8 lg:size-48 xl:hidden"
-            src={'/assets/images/faculty/' + faculty.id + '.jpg'}
+            src={`assets/images/faculty/'${faculty.id}.jpg`}
           />
           <ul className="flex h-full flex-col justify-center font-medium">
             <li>
@@ -145,7 +130,9 @@ export default async function FacultyOrStaffLayout({
                   size={28}
                   className="mr-[12px] inline text-primary-700"
                 />
-                NIT Campus
+                {faculty.officeAddress === ''
+                  ? 'Not Available'
+                  : faculty.officeAddress}
               </p>
             </li>
           </ul>
@@ -156,52 +143,59 @@ export default async function FacultyOrStaffLayout({
             width={200}
             height={200}
             className="absolute z-10 size-48 translate-x-[-50%] translate-y-[-50%] rounded-full border-[16px] border-background object-cover"
-            src={'/faculty-and-staff/' + faculty.id + '.svg'}
+            src={`/faculty-and-staff/'${faculty.id}.svg`}
           />
         </section>
         <article className="rounded-2xl drop-shadow-[0_4px_24px_rgba(0,43,91,0.1)] max-xl:pt-3 xl:bg-shade-light xl:p-5">
           <ul className="grid h-full grid-cols-3 gap-5 xl:ml-16">
-            {['PUBLICATIONS', 'CONTINUING EDUCATION', 'DOCTORAL STUDENTS'].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="flex h-full flex-col justify-around rounded-2xl bg-primary-700 p-3 max-xl:aspect-square"
-                >
-                  <h4 className="my-auto text-center text-shade-light">12</h4>
-                  <p className="mb-auto text-center font-light text-shade-light">
-                    {item}
-                  </p>
-                </li>
-              )
-            )}
+            {['PUBLICATIONS', 'PATENTS', 'BOOKS'].map((item) => (
+              <li
+                key={item}
+                className="flex h-full flex-col justify-around rounded-2xl bg-primary-700 p-3 max-xl:aspect-square"
+              >
+                <h4 className="my-auto text-center text-shade-light">
+                  {
+                    faculty[
+                      item.toLowerCase() as 'publications' | 'patents' | 'books'
+                    ].length
+                  }
+                </h4>
+                <p className="mb-auto text-center font-light text-shade-light">
+                  {item}
+                </p>
+              </li>
+            ))}
           </ul>
         </article>
       </section>
       <section className="container mb-6 grid grid-cols-2 justify-between max-md:gap-6 md:flex">
-        {['googleScholarId', 'orcidId', 'researchGateId', 'scopusId'].map(
-          (key) => {
-            if (key in faculty) {
-              return (
-                <Link
-                  key={key}
-                  className="flex aspect-square flex-col justify-evenly rounded-2xl bg-shade-light drop-shadow-[0_4px_24px_rgba(0,43,91,0.1)] md:w-[23%] lg:w-[20%]"
-                  // @ts-expect-error - Ignore type checking for key
-                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-                  href={faculty[key]}
-                >
-                  <Image
-                    alt={key}
-                    src={'/faculty-and-staff/' + key + '.svg'}
-                    height={0}
-                    width={0}
-                    className="mx-auto h-[50%] w-[50%]"
-                  />
-                  <h5 className="mx-auto">Orcid</h5>
-                </Link>
-              );
-            }
+        {Object.entries({
+          'Google Scholar': 'googleScholarId',
+          Orcid: 'orcidId',
+          'Research Gate': 'researchGateId',
+          Scopus: 'scopusId',
+        }).map(([key, value]) => {
+          if (value in faculty) {
+            return (
+              <Link
+                key={key}
+                className="flex aspect-square flex-col justify-evenly rounded-2xl bg-shade-light drop-shadow-[0_4px_24px_rgba(0,43,91,0.1)] md:w-[23%] lg:w-[20%]"
+                // @ts-expect-error - Ignore type checking for key
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+                href={faculty[value] ?? ''}
+              >
+                <Image
+                  alt={key}
+                  src={`/faculty-and-staff/${key}.svg`}
+                  height={0}
+                  width={0}
+                  className="mx-auto h-[50%] w-[50%]"
+                />
+                <h5 className="mx-auto">{key}</h5>
+              </Link>
+            );
           }
-        )}
+        })}
       </section>
 
       <section className="container flex gap-y-4 max-md:flex-col md:h-[28rem] md:gap-x-4 lg:gap-x-8">
