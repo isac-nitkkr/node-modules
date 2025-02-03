@@ -181,7 +181,7 @@ export default async function Administration({
           id="acts-and-statutes"
           href="#acts-and-statutes"
         />
-        <ol className="container grid list-decimal justify-center text-lg">
+        <ol className="container mx-auto w-fit list-decimal text-lg">
           {text.actsPoints.map((item, index) => (
             <li key={index}>
               <Link href={item.link} target="_blank" rel="noopener noreferrer">
