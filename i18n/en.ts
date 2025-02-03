@@ -51,6 +51,36 @@ const text: Translations = {
     totalCredits: 'Credits',
     syllabus: 'Syllabus',
   },
+  Curriculum: {
+    courseCode: 'Course Code',
+    title: 'Course Details',
+    coordinator: 'Course Coordinator',
+    prerequisites: {
+      title: 'Prerequisites',
+      none: 'No prerequisites for this course',
+    },
+    nature: 'Course Nature',
+    objectives: 'Objectives',
+    content: 'Content',
+    outcomes: 'Outcomes',
+    essentialReading: 'Essential Reading',
+    supplementaryReading: 'Supplementary Reading',
+    similarCourses: 'Similar Courses',
+    referenceBooks: 'Reference Books',
+  },
+  Dean: {
+    deanTitles: {
+      academic: 'Dean, Academic',
+      'estate-and-construction': 'Dean, Estate & Construction',
+      'faculty-welfare': 'Dean, Faculty Welfare',
+      'industry-and-international-relations':
+        'Dean, Industry & International Relations',
+      'planning-and-development': 'Dean, Planning & Development',
+      'research-and-consultancy': 'Dean, Research & Consultancy',
+      'student-welfare': 'Dean, Student Welfare',
+    },
+    responsibilities: 'Responsibilities',
+  },
   Departments: { title: 'DEPARTMENTS' },
   Department: {
     headings: {
@@ -102,6 +132,33 @@ const text: Translations = {
     login: 'Login',
     profile: { alt: 'Profile image', view: 'View Profile' },
   },
+  Hostels: {
+    title: 'Hostels',
+    notificationsTitle: 'Hostel Notifications',
+    boysHostels: 'Boys Hostels',
+    girlsHostels: 'Girls Hostels',
+    misc: 'Miscellaneous',
+    rulesTitle: 'Hostel Rules & Conducts',
+    hostelDetails: {
+      name: 'Hostel Name: ',
+      overview: 'Hostel Overview',
+      staffOverview: 'Hostel Staff Overview',
+      facilities: 'Hostel Facilities Overview',
+      contact: 'Contact us: ',
+      email: 'Email: ',
+      wardens: 'Wardens: ',
+      faculty: 'Faculty',
+      staff: 'Staff',
+      general: 'General',
+      hostelsStaffTable: {
+        name: 'Name',
+        designation: 'Designation',
+        contact: 'Contact',
+        hostelPost: 'Hostel Post',
+        email: 'Email',
+      },
+    },
+  },
   Login: {
     title: 'Sign In',
     enterEmail: 'Enter your email',
@@ -127,6 +184,92 @@ const text: Translations = {
       faculty: 'Faculty',
     },
     viewAll: 'View All',
+  },
+  Institute: {
+    welcome: 'Welcome to NIT Kurukshetra',
+    profile: {
+      title: 'Institute Profile',
+      vision: {
+        title: 'Vision',
+        content: [
+          'To be a role-model in technical education and research, responsive to global challenges.',
+        ],
+      },
+      mission: {
+        title: 'Mission',
+        content: [
+          'To impart quality technical education that develops innovative professionals and entrepreneurs.',
+          'To undertake research that generates cutting-edge technologies and futuristic knowledge, focusing on socio-economic needs.',
+        ],
+      },
+      history: {
+        title: 'Historical Footprint',
+        content: [
+          'The MBA program at NITK is The Central Government in consultation with the Planning Commission had sanctioned a scheme of establishment of Regional Engineering Colleges under the Third Five Year Plan in order to expand the facilities for technical education in the country during the plan period. The "Regional Engineering College, Kurukshetra" was one of the seventeen colleges in the country. Vide letter No. 16-4/60-T.5, dated the 26th February, 1962 from the Secretary to the Government of India, Ministry of Scientific Research and Cultural Affairs, New Delhi, it was established in the year 1963 as a joint and cooperative enterprise of Govt. of India and the State Government of Haryana to serve the State of Haryana and the rest of the country for imparting technical training to youth and for fostering national integration. Its objective was to provide instructions and research facilities in various disciplines of engineering and technology and the advancement of learning and dissemination of knowledge in each such discipline.',
+
+          'The first admission to five year B.Sc. (Engg.) degree course was made by the Institute in July, 1963 at Punjab Engineering College, Chandigarh and Thapar Institute of Engineering & Technology, Patiala, with an intake of 60 students at each place. This was repeated in July, 1964 also. The Institute started functioning on its present campus at Kurukshetra from the year 1965-66. The students were admitted to the first year of the five year integrated B.Sc.(Engg.) degree courses in Civil, Electrical and Mechanical Engineering. In 1967-68, M.Sc. (Engg.) degree courses in Civil, Electrical and Mechanical Engineering were introduced. In 1971-72, a degree course in Electronics & Communication Engineering and a Post-graduate Diploma Course in Scientific Instrumentation were started. In 1976-77, part time M.Sc. (Engg.) degree courses in Electronics & Communication Engineering and Instrumentation Engineering were started. The first registration for the degree of Doctor of Philosophy in the Faculty of Engineering and Technology was done in July, 1967. The Institute switched over to the four year B.Tech.Degree course with effect from 1985-86. The Course has since been designated as Bachelor of Technology (B.Tech.). The M. Sc.(Engg.) degree in various disciplines has since been renamed as M.Tech. degree with effect from the session 1983-84. In 1987-88, B.Tech. degree course in Computer Engineering and M.Tech. degree Course in Electronics Engineering were started. In 1989-90, M.Tech. degree course in Water Resources Engineering was started in the Department of Civil Engineering. A special two semesters M.Tech. degree course in Instrumentation for candidates holding P.G. Diploma in Scientific Instrumentation has been introduced from January, 1988. Three year Special Degree Course, ‘Bachelor of Engineering’ for in-service diploma holders was introduced from the session 1982-83 in Civil, Electrical and Mechanical Engineering. This course was fully funded by Govt. of Haryana. The Govt. of Haryana has discontinued the course w.e.f. 2001-02. During the period 1963 to 2001, there have been considerable achievements in the academic as well as development areas.',
+
+          'The REC Kurukshetra was registered under the Societies Registration Act XXI of 1860 on 25th April, 1964. Vide letter No. F.9-10/2002-U.3 dated 26.6.2002 the Govt. of India, Ministry of Human Resource Development, New Delhi has upgraded the REC Kurukshetra to National Institute of Technology, Kurukshetra with the status of Deemed University w.e.f. 26.6.2002.',
+
+          'The NIT Kurukshetra has also been registered under the Societies Registration Act XXI of 1860 on 9th April, 2003. The new Memorandum of Association has also been formulated under the guidance of the Ministry of Human Resource Development. National Institute of Technology Kurukshetra, Haryana is a premier Technical Institute of the region. The institute started working as Regional Engineering College, Kurukshetra in 1963. Like other Regional Engineering Colleges of India this institution too, had been a joint enterprise of the State and Central Governments.',
+
+          'This Institute was conferred upon status of Deemed University on June 26, 2002. Since then it has been renamed as National Institute of Technology, Kurukshetra. The Institute started functioning in its present campus at Kurukshetra in 1965-66 with 120 students admitted in the first year of the Five-Year Courses of study for the B.Sc. (Engg.) Degree in Civil, Electrical and Mechanical Engineering. The annual intake was increased to 250 students in 1966-67. B.Sc. (Engg.) degree courses in Electronics and Communication Engineering was added in 1971-72. in 1967-68 M. Sc. (Engg.) degree courses in Electronics and Communication Engineering was added in 1971-72. In 1967-68 M. Sc. (Engg.) degree courses in Civil, Electrical and Mechanical Engineering and in 1971-72, a Postgraduate diploma in Scientific instrumentation were also started. In July, 1976 Part-Time M. Sc. ( Engg.) degree courses in Electronics and Communication Engineering and instrumentation were started. The First registration for the degree of Doctor of Philosophy in the Faculty of Engineering and Technology was made in July, 1967.',
+
+          'The Institute changed over to the 4-year B.Tech. Degree courses with effect from the academic year 1985-86. The new courses was designated as B. Tech. The annual intake in B.Tech programme at present is 540. Special three-year degree courses in Civil, Electrical and Mechanical Engineering, designated as ‘Bachelor of Engineering for in-service engineering diploma holders were introduced from the session 1982-83. However, these courses were discontinued by the Govt. of Haryana in the year 2000. The 2-year M.Sc. (Engg.) degree courses in various disciplines were redesignated as M. Tech. degree courses with effect form the session 1983-84. Now the duration of the Courses is 2 years. The annual intake in M.Tech programme at present is 165. From the session 1987-88, the Institute introduced a four-year B. Tech. degree programme in Computer Engineering with an intake of 30 students.',
+
+          'The institute also introduced a full time M. Tech. Degree courses in Electronics and Communication Engineering with and intake of 13. The intake of B. Tech. Electronics and communication Engineering degree courses was increased from 30 to 60 from the session 1987-88. Full time M. Tech. degree courses in Water Recourses (Civil Engineering Dept.) were introduced in 1989-90. In the session 2006-07, the Institute introduced a two-year MBA programme and two four-year B. Tech. degree programmes in information technology and industrial engineering management. In the session 2007-08, the Institute started a three-year MCA programme. Each of these newly introduced courses has an intake of 60 students.',
+
+          'In addition to providing instructions in various disciplines of Engineering and Technology at the Undergraduate and Postgraduate levels, the Institute offers excellent facilities for advanced research in the emerging areas of Science and Technology. The syllabus and the curricula are constantly being updated to meet the growing demands and needs of the country in different areas of technology. The infrastructure is geared to enable the Institute to turn out technical personnel of a high quality.',
+        ],
+        readMore: 'Read More',
+      },
+    },
+    nirf: {
+      title: 'NIRF Ranking',
+      year: 'Year',
+      result: 'Result',
+      dataFile: 'Data File',
+      nirfCertificate: 'NIRF Certificate',
+    },
+    admission: {
+      title: 'Admission Process & Education System',
+      process: {
+        title: 'Admission Procedure',
+        content: [
+          'In the Undergraduate courses – B.Tech. Degree Courses, admissions are made on the basis of All India Engineering Entrance Examination (AIEEE) conducted by the Central Board of School Education (CBSE) on behalf of the Govt. of India.',
+          'However the admission to M. Tech. degree courses are made on the basis of the candidate’s score in the GATE examination. Seats are first filled up by admitting GATE-qualified candidates and then by industry-sponsored candidates. The remaining vacant seats are offered to Non-GATE candidates with a minimum of 60 percent marks (55 percent for SC candidates) in their qualifying examination. While GATE candidates are eligible for a scholarship of Rs. 5000/- per month. Non-GATE candidates are not given any scholarships.',
+        ],
+      },
+      education: {
+        title: 'Education System',
+        content: [
+          'The Education System of the Institute is divided into academic sessions comprising of two semesters – Even and Odd semester. The Institute offers courses of study leading to B.Tech and M.Tech. degree and research facilities leading to the degree of Doctor of Philosophy. The small of instructions and examination is English. The Institute has assumed the status of a Deemed University w.e.f. 26.6.2002. The Institute is now independent in every respect relating to academic work such as Examinations, evaluation of the answer sheets, declaration of results and other allied matters. The Institute has switched over from the conventional examination and evaluation system to the Credit Based Examination System.',
+          'The courses include study at the Institute, visits to work sites and practical training in the Institute Workshops and in approved Engineering works. There is a semester examination at the end of each semester.',
+        ],
+      },
+    },
+    funds: {
+      title: 'Sources of Funds',
+      content:
+        'As per establishment of the REC now known as NIT, Kurukshetra the entire Non-plan expenditure on Undergraduate Courses was borne by the central and State Government on 50:50 basis. This practice remained intact upto 31.3.2003 Consequent upon conversion of REC to NIT by the Government of India has taken over full administrative and financial control and the Central Government has started bearing the expenditure on Undergraduate Courses on 100% basis. However, Since the inception of the Institute the expenditure on PG Courses is borne by the Central Government.',
+    },
+    collaboration: {
+      title: 'Institute-Industry Collaboration',
+      content: [
+        'ECE Department has an MOU with HEWLETT PACKARD INDIA SOFTWARE OPERATION PVT. LIMITED, 29 CUNNINGNAM ROAD, BANGALORE-52. Under this MOU, B.Tech final year students are allocated live Projects from HEWLETT PACKARD and jointly monitored by their faculty and those from NIT Kurukshetra.',
+        'The Institute offers consultancy services on the design and development problems referred to it by various Govt. and other Industrial Organizations.',
+        'TEQIP efforts for Institute- Industry interaction is being attempted to be increased. The Institute organised a two-day workshop on Industry Institute interaction (NWIII-2007) on Feburary 19-20, 2007 at Hotel Shiwalikview Chandigarh, which was largely attended by the leading industry and academia. During the deliberations of the workshop it was agreed upon to enter for a Memorandum of understanding between NIT Kurukshetra and Altair Engineering India regarding setting up of a center of excellence in the field of computer Aided Engineering (CAE) at NIT Kurukshetra for mutual benefits.',
+      ],
+    },
+    quickLinks: {
+      title: 'Quick Links',
+      campus: 'Campus & Infrastructure',
+      documentary: 'Institute Documentary',
+      organisationChart: 'Organisation Chart',
+      sections: 'Sections',
+      gallery: 'Photo Gallery',
+      administration: 'Administration',
+    },
   },
   NotFound: {
     title: 'Not Found',
@@ -189,6 +332,20 @@ const text: Translations = {
       quickSend: { title: 'QUICK SEND' },
     },
     logout: 'LOG OUT',
+  },
+  Programmes: {
+    btechAbout:
+      'The Institute offers courses of study leading to B.Tech., M.Tech. degree and research facilities leading to the degree of Doctor of Philosophy. The medium of instructions and examination is English. The Institute has assumed the status of deemed University. The courses include study at the Institute, visits to work sites and practical training. In the Institute Workshops and in approved Engineering works. There is NIT (A Deemed University) Examination at the end of each semester. Courses of study are offered in the following disciplines:',
+    mtechAbout:
+      'Teaching in each academic year is divided into two semesters. The duration of the course is four semesters for regular students and six semesters for part-time students (for NIT, Kurukshetra employees only). All the admitted candidates would be governed by the Academic Regulations for Post-Graduate Programmes, as laid down by the National Institute of Technology (Institution of National Importance), Kurukshetra. The M.Tech seats are first filled by GATE-qualified candidates, then by industry-sponsored candidates and if seats remain vacant, by other candidates. The non-GATE candidates are not eligible for scholarships.',
+    courseOfStudy: 'Courses of Study:',
+    departmentAndSchools: 'Deptt./ Schools',
+    noOfSeats: 'No. of Seats',
+    secialization: 'Specialization',
+    discipline: 'Discipline',
+    btech: 'B. tech',
+    mtech: 'M. tech',
+    seatDistribution: 'Seat Distribution',
   },
   Search: {
     placeholder: 'Quick Search...',
@@ -367,6 +524,9 @@ Saturdays & Holidays: 09.00 am to 05.00 pm`,
     Sports: {},
     Store: {},
   },
+  Sections: {
+    title: 'Sections',
+  },
   Status: {
     NoResult: {
       title: 'No results found',
@@ -393,6 +553,132 @@ Saturdays & Holidays: 09.00 am to 05.00 pm`,
       ncc: 'NCC',
     },
     sections: { clubs: { title: 'CLUBS', more: 'Explore all clubs' } },
+  },
+  TrainingAndPlacement: {
+    title: 'Training and Placement',
+    headings: {
+      ourrecruiters: 'Our Recruiters',
+      stats: 'Placement Statistics',
+      guidelines: 'Guidelines',
+      about: 'About us',
+      forrecruiters: 'For Recruiters',
+      faq: 'FAQ',
+    },
+    about: {
+      content: [
+        `NIT Kurukshetra is one of the premier technical institutes in the country. Founded in 1963 as Regional Engineering College Kurukshetra, the institute was rechristened as the National Institute of Technology Kurukshetra on June 26, 2002. The institute offers 4-year B. Tech degree courses in seven engineering streams, 2-year M. Tech degree courses in 22 areas of specialization of science & technology, and postgraduate courses leading to the degree in MBA and MCA. The infrastructure is geared to enable the institute to run out of technical personnel of high quality. In addition to providing knowledge in various disciplines of engineering and technology at the undergraduate and post-graduate levels, the institute is actively engaged in research activities in emerging areas including Nanotechnology, Ergonomics, Robotics, CAD/CAM, Energy and Environment. The placement record of the institute has been commendable and consistent due to strong vigour and commitment to generating talent.`,
+        `The Training and Placement (T&P)Cell is a nodal point of contact for companies seeking to establish a fruitful relationship with the institute. The cell is being headed by Prof. In-charge, and supported by Faculty In-charge, Placement Coordination Committee of Students (PCC) and the secretariat. The placement team works tirelessly to ensure that top notch opportunities are brought to the students & manages all interactions between the visiting companies and the institute. The cell provides all the possible assistance to the recruiters for Pre Placement Talks, Conducting Tests and Interviews with the company personnel. It also aims to fine-tune the students that they require not just for placements but also as they embark on their corporate carrier.`,
+      ],
+      tnpbrochure: `T&P brochure (23-24)`,
+      tnpteam: `T&P Team (23-24)`,
+      facilities: {
+        heading: `NIT Kurukshetra assures the best possible support and facilities to the recruiting companies.`,
+        content: [
+          'Auditorium and Lecture halls, fully equipped with the latest multimedia and Wi-Fi for Pre-Placement Talks (PPTs), workshops etc.',
+          'Facility of Tele Conferencing, Video Conferencing and online interviews.',
+          'Seminar and Conference rooms for Group discussions and Personal Interviews.',
+          'On-campus accommodation with moderate facilities in the Guest House for the recruiting panel.',
+          'Complete assistance by the student coordinators at each level of the placement process.',
+          'Highly motivated and experienced staff to synchronize the whole process.',
+          'Pickup services from nearest Airport, and Kurukshetra Railway Station. The services can also be availed from Delhi.',
+        ],
+      },
+    },
+    stats: {
+      content: [
+        `Academic Session 2022-23 `,
+        `Academic Session 2021-22`,
+        `Academic Session 2020-21 FN`,
+        `Academic-Session-2019-20 FN `,
+        `Academic Session 2018-19 FN`,
+        `Academic Session 2018_19`,
+        `Academic Session 2017_18`,
+        `Academic Session 2017-18 FN `,
+        `Academic Session 2016_17`,
+      ],
+    },
+    ourrecruiters: {
+      about: `Training and Placement Cell, NIT Kurukshetra conducts all recruitment-related activities of the institute. The placement team works tirelessly to ensure that top-notch opportunities are brought to the students & manages all interactions between the visiting companies and the institute. NIT Kurukshetra assures the best facilities and supports possible to the recruiting companies.`,
+    },
+    forrecruiters: {
+      build: `Build a relationship`,
+      invitaion: `Invitaion`,
+      reach: `Reach Us`,
+    },
+    guidelines: {
+      protocol: `Placement Protocol`,
+      tnpguidelines: `T&P Cell Guidelines`,
+      internguidlines: `UG Internship Guidlines`,
+    },
+    faq: {
+      questions: [
+        `Please explain the ways of recruiting students from the campus?`,
+        `When does the placement program take place?`,
+        `What kind of information do students expect in PPTs and/or Company brochures?`,
+        `How well is the campus equipped for conducting presentations and the placement process?`,
+        `Is it possible to conduct placement process off-campus? Can recruitments be done without
+having to come to the campus?`,
+        `What steps students need to follow in the placement process?`,
+        `On what basis is the slot assigned to a company?`,
+        `Can a student apply to more than one company once he/she is placed?`,
+        `Is there any fee associated with participating in the placement drive?`,
+      ],
+      answers: [
+        [
+          `Recruitment process is done by following ways in the institute`,
+          `● Hiring 6th Semester UG students for internship and then offering PPOs according to their performance.`,
+          `● Participating in the campus placement drive that goes around throughout the year.`,
+        ],
+        [
+          `Most of the organizations start visiting campus from May - June for both hiring pre-final year (16
+weeks to 20 weeks’ internship) and final year students.`,
+        ],
+        [
+          `A Pre-Placement Talk or a brochure provided by the firm should ideally contain the following:`,
+          `i. Profile and reputation of the company.`,
+          `ii. Locations of posting.`,
+          `iii. Career roles and responsibilities offered in different types of profiles`,
+          `iv. Compensation packages`,
+        ],
+        [
+          `The campus is equipped with a Senate Hall, presentation facilities, Computer labs (LAN
+connected) as well as multimedia and projection facilities. Conference rooms, presentation rooms,
+etc. can also be arranged if required.`,
+        ],
+        [
+          `Yes. For an Off-campus drive, the concerned placement coordinator, which shall be allotted to
+organization once you show interest, would take permission from T&P cell and also consent from
+the students interested for that drive. However, we'd highly appreciate if the firm visits our
+campus for the recruitments, for we are known for hospitality and we'd love to showcase the
+same.`,
+        ],
+        [
+          `The steps that students need to follow are:`,
+          `● Communicate your interest in being a part of the placement process to the T&P Cell.`,
+          `● Maintain discipline during the placement drive.`,
+          `● Attend complete placement drive as per PCC and T&P cell guidance.`,
+          `● On-Time submission of Resume/Applications`,
+        ],
+        [
+          `Slotting is done subject to the following parameters:`,
+          `● Work profile`,
+          `● Compensation package`,
+          `● Career Prospects`,
+          `● Student Intake`,
+          `● Past relationship with NIT Kurukshetra`,
+        ],
+        [
+          `No. The training and placement Cell has implemented “One student, one job” policy wherein a
+student is not allowed to sit for further placement session once he/she is placed. However, all the
+students would be eligible to sit for further companies provided 80% of the eligible students of
+the particular branch are placed, which we term as “Second round”. For PSUs, the percentage
+rolls down to 60% of the eligible students for second round of placement session.`,
+        ],
+        [
+          `No. There is no fee associated with the registration or the placement process.`,
+        ],
+      ],
+    },
   },
 };
 
